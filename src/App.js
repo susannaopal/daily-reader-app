@@ -7,10 +7,10 @@ const App = () => {
 const [articles, setArticles] = useState([]);
 
   return (
-    <>
+    <main className="App">
       <h1>Headlines</h1>
       <ArticlesContainer />
-    </>
+    </main>
   )
 }
 
