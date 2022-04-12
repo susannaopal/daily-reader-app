@@ -1,10 +1,11 @@
 import React from 'react';
 import './ArticleCard.css';
 
-const ArticleCard = () => {
+const ArticleCard = ({ title, abstract, id }) => {
   return (
     <div className="article-card">
-      <p>I'M AN ARTICLE CARD</p>
+      <h1>{title}</h1>
+      <p>{abstract}</p>
     </div>
   )
 }
