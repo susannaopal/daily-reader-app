@@ -3,7 +3,7 @@ import './App.css';
 import HeadlinesContainer from './HeadlinesContainer';
 import Nav from './Nav'
 // import Home from './Home.js';
-import { fetchHeadlines } from './apiCall.js';
+import { fetchHeadlines, fetchSingleSection } from './apiCall.js';
 import SearchForm from './SearchForm.js';
 
 // class App extends Component {
@@ -40,17 +40,18 @@ class App extends Component {
     super();
     this.state = {
       headlines: [],
+      singleSectionHeadlines: [],
       error: ''
     };
   }
 
 componentDidMount = () => {
   fetchHeadlines()
-  // .then(data => console.log("data", data.results))
-  // .then(data => this.setState({ headlines: data.results }))
- 
   .then(data => this.setState({headlines: [...data.results]}))
   .catch(error => this.setState({error: error}))
+  // fetchSingleSection()
+  // .then(data => this.setState({singleSectionHeadlines: [...data.results]}))
+  // .catch(error => this.setState({error: error}))
 }
 
 render() {
