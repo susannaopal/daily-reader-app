@@ -13,7 +13,6 @@
 //   }
 
 //   handleSubmit(event) {
-//     alert('Your favorite flavor is: ' + this.state.value);
 //     event.preventDefault();
 //   }
 
@@ -59,6 +58,7 @@
 
 // export default SearchForm;
 
+
 import './SearchForm.css';
 // import ArticleCard from './ArticleCard.js'; 
 import React, { Component } from 'react';
@@ -68,29 +68,37 @@ class SearchForm extends Component {
     super(props);
     this.state = {
       searchTerm: '',
-      filteredArticles: [],
+      filteredArticles: []
       // hasSearched: false
     };
   }
+
  handleChange = (event) => {
     this.setState({searchTerm: event.target.value})
-    this.setState({hasSearched: false})
-  };
-  
-   handleSubmit = (event) => {
-    event.preventDefault()
-    // this.setState({hasSearched: true})
-  //   if (this.state.searchTerm === null) {
-  //     return 
-  //   } 
-  //    const filteredArticles = this.props.headlines.filter((headline) => {
-  //     if(headline.title.toLowerCase().includes(this.state.searchTerm.toLowerCase()))
-  //   return
-  // });
-  //     this.setState({ filteredArticles: filteredArticles })
+    // this.setState({hasSearched: false})
   };
 
-  render () {
+   handleSubmit = (event) => {
+    event.preventDefault()
+    this.setState({hasSearched: true})
+    if (this.state.searchTerm === '') {
+      console.log("there is no search term")
+      return 
+    } 
+     const foundArticles = this.props.headlines.filter((headline) => {
+      if(headline.title.toLowerCase().includes(this.state.searchTerm.toLowerCase())) {
+
+        console.log("headine", headline.title)
+        // console.log("this.searchterm", this.state.searchTerm)
+        return headline.title
+      }
+    });
+    this.setState({ filteredArticles: foundArticles })
+  };
+  
+  render () { 
+    // console.log("state set", this.state.filteredArticles)
+    // console.log("console", this.props.headlines[1].title)
     return (
           <form>
             <input className='search-bar-input'
@@ -99,6 +107,7 @@ class SearchForm extends Component {
               value={this.state.searchTerm}
               onChange={this.handleChange}
               />
+             <button className='submit-btn' onClick={(event) => this.handleSubmit(event)}>Submit</button>
          </form> 
     )
   }

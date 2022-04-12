@@ -49,24 +49,14 @@ componentDidMount = () => {
   fetchHeadlines()
   .then(data => this.setState({headlines: [...data.results]}))
   .catch(error => this.setState({error: error}))
-  // fetchSingleSection()
-  // .then(data => this.setState({singleSectionHeadlines: [...data.results]}))
-  // .catch(error => this.setState({error: error}))
 }
 
 render() {
   return(
       <main className='App'>
           <Nav />
-          <SearchForm />
-          {/* <Home /> */}
+          <SearchForm headlines={this.state.headlines}/>
           <HeadlinesContainer headlines={this.state.headlines}/>
-          {/* <Routes>  */}
-            {/* <Route path='*' element={<Error />} /> */}
-            {/* <Route path='/' element={<Home />}/> */}
-            {/* <Route path='/quotes' element={<Quotes quotes={this.state.quotes} />}/> */}
-            {/* <Route path='/search' element={<Search quotes={this.state.quotes} />}/> */}
-          {/* </Routes> */}
       </main>
     )
   }
