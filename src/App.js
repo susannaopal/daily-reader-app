@@ -1,9 +1,15 @@
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import ArticlesContainer from './ArticlesContainer';
+import SearchForm from './SearchForm.js';
 
-function App() {
+const App = () => {
+const [articles, setArticles] = useState([]);
+
   return (
     <>
-      <h1>Testing</h1>
+      <h1>Headlines</h1>
+      <ArticlesContainer />
     </>
   )
 }
