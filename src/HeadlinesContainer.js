@@ -12,7 +12,6 @@ const ArticlesContainer = ( {headlines} ) => {
         id={headline.id}
         key={headline.id}
       />
-
     )
   })
   return (
