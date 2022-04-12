@@ -4,10 +4,7 @@ import HeadlinesContainer from './HeadlinesContainer';
 import Nav from './Nav'
 // import Home from './Home.js';
 import { fetchHeadlines } from './apiCall.js';
-
-
-
-// import SearchForm from './SearchForm.js';
+import SearchForm from './SearchForm.js';
 
 // class App extends Component {
 //   constructor() {
@@ -50,15 +47,17 @@ class App extends Component {
 componentDidMount = () => {
   fetchHeadlines()
   // .then(data => console.log("data", data.results))
-  // .then(data => this.setState({data: data.results}))
+  // .then(data => this.setState({ headlines: data.results }))
+ 
   .then(data => this.setState({headlines: [...data.results]}))
-  // .catch(error => this.setState({error: error}))
+  .catch(error => this.setState({error: error}))
 }
 
 render() {
   return(
       <main className='App'>
           <Nav />
+          <SearchForm />
           {/* <Home /> */}
           <HeadlinesContainer headlines={this.state.headlines}/>
           {/* <Routes>  */}

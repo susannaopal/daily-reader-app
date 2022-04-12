@@ -7,6 +7,7 @@ const ArticlesContainer = ( {headlines} ) => {
     return (
       <ArticleCard 
         title={headline.title}
+        byline={headline.byline}
         abstract={headline.abstract}
         id={headline.id}
         key={headline.id}
@@ -16,7 +17,7 @@ const ArticlesContainer = ( {headlines} ) => {
   })
   return (
     <div className="headlines-container">
-      <h1>Headlines</h1>
+      <h1>Today's Headlines</h1>
       {articleCards}
     </div>
   )
