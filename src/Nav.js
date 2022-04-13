@@ -7,7 +7,7 @@ const Nav = () => {
   return (
     <nav className='nav-container'>
       <h1>The Daily Reader</h1>
-      <p>a place to learn more about the headlines of the day</p>
+      <p>a place to read today's headlines</p>
     </nav>
   )
 }

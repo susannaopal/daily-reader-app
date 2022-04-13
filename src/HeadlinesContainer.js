@@ -11,13 +11,14 @@ const ArticlesContainer = ( {headlines} ) => {
         abstract={headline.abstract}
         id={headline.id}
         key={headline.id}
+        url={headline.url}
       />
 
     )
   })
   return (
     <div className="headlines-container">
-      <h1>Today's Headlines</h1>
+      <h3>Today's Headlines</h3>
       {articleCards}
     </div>
   )

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import HeadlinesContainer from './HeadlinesContainer';
 import Nav from './Nav'
-// import Home from './Home.js';
 import { fetchHeadlines, fetchSingleSection } from './apiCall.js';
 import SearchForm from './SearchForm.js';
 // import { Routes, Route } from 'react-router-dom';

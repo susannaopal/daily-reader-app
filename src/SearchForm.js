@@ -1,9 +1,7 @@
 
 import './SearchForm.css';
 import ArticleCard from './ArticleCard.js'; 
-// import HeadlinesContainer from './HeadlinesContainer.js'
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 
 class SearchForm extends Component {
   constructor(props) {
@@ -13,7 +11,7 @@ class SearchForm extends Component {
       filteredArticles: [],
       hasSearched: false,
       emptySubmitError: 'Please add something before searching.',
-      searchError: 'Sorry, there are no headlines available.',
+      searchError: 'Sorry, there are no headlines available.'
     };
   }
 
@@ -31,8 +29,6 @@ class SearchForm extends Component {
     } 
      const foundArticles = this.props.headlines.filter((headline) => {
       if(headline.title.toLowerCase().includes(this.state.searchTerm.toLowerCase())) {
-
-        console.log("headine", headline.title)
         return headline.title
       }
     });
@@ -55,6 +51,7 @@ class SearchForm extends Component {
     return (
       <>
           <form>
+            <h3>Search Today's Headlines: </h3>
             <input className='search-bar-input'
               type='text'
               placeholder='Search Articles'
