@@ -11,7 +11,9 @@ class SearchForm extends Component {
     this.state = {
       searchTerm: '',
       filteredArticles: [],
-      hasSearched: false
+      hasSearched: false,
+      emptySubmitError: 'Please add something before searching.',
+      searchError: 'Sorry, there are no headlines available.',
     };
   }
 
@@ -38,12 +40,14 @@ class SearchForm extends Component {
   };
   
   render () { 
-    const searchedArticles = this.state.filteredArticles.map((headline) => {
+    const searchedArticles = this.state.filteredArticles.map((headline, index) => {
       return (
         <ArticleCard
         title={headline.title}
         byline={headline.byline}
         abstract={headline.abstract}
+          id={index}
+          key={index}
        />
     )
   });
@@ -60,6 +64,8 @@ class SearchForm extends Component {
              <button className='submit-btn' onClick={(event) => this.handleSubmit(event)}>Submit</button>
          </form> 
          {this.state.hasSearched && this.state.filteredArticles.length > 0 && searchedArticles}
+          {this.state.hasSearched && this.state.searchTerm === '' && this.state.emptySubmitError}
+          {this.state.hasSearched && this.state.searchTerm !== '' && this.state.filteredArticles.length === 0 && this.state.searchError}
       </>
     )
   }
