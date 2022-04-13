@@ -4,7 +4,6 @@ import HeadlinesContainer from './HeadlinesContainer';
 import Nav from './Nav'
 import { fetchHeadlines, fetchSingleSection } from './apiCall.js';
 import SearchForm from './SearchForm.js';
-// import { Routes, Route } from 'react-router-dom';
 
 
 class App extends Component {

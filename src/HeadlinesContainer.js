@@ -13,15 +13,17 @@ const ArticlesContainer = ( {headlines} ) => {
         key={headline.id}
         url={headline.url}
       />
-
     )
   })
   return (
     <div className="headlines-container">
-      <h3>Today's Headlines</h3>
+      <h2>🗞 Today's Headlines 📰</h2>
+      <h5> Click on a headline to read more at the New York Times 👇 </h5>
       {articleCards}
     </div>
   )
 }
 
 export default ArticlesContainer;
+
+

@@ -9,7 +9,6 @@ const ArticleCard = ({ title, abstract, byline, url, id }) => {
       <h3>{title}</h3>
       <h4>{byline}</h4>
       <p>{abstract}</p>
-        {/* <button>Read More</button> */}
       </a>
     </div>
   )

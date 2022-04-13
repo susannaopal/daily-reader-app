@@ -55,10 +55,10 @@ class SearchForm extends Component {
     return (
       <>
           <form>
-            <h3>Search Today's Headlines: </h3>
+            <h3>Search Headlines: </h3>
             <input className='search-bar-input'
               type='text'
-              placeholder='Search Articles'
+              placeholder='🔎 Search Articles'
               value={this.state.searchTerm}
               onChange={this.handleChange}
               />
