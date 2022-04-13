@@ -33,8 +33,15 @@ class SearchForm extends Component {
       }
     });
     this.setState({ filteredArticles: foundArticles })
+    this.clearSearch()
   };
   
+  clearSearch = () => {
+    this.setState({
+      searchTerm: '',
+    })
+  }
+
   render () { 
     const searchedArticles = this.state.filteredArticles.map((headline, index) => {
       return (
@@ -64,7 +71,7 @@ class SearchForm extends Component {
               />
              <button className='submit-btn' onClick={(event) => this.handleSubmit(event)}>Submit</button>
          </form> 
-         {this.state.hasSearched && this.state.filteredArticles.length > 0 && searchedArticles}
+          {this.state.hasSearched && this.state.filteredArticles.length > 0 && searchedArticles}
           {this.state.hasSearched && this.state.searchTerm === '' && this.state.emptySubmitError}
           {this.state.hasSearched && this.state.searchTerm !== '' && this.state.filteredArticles.length === 0 && this.state.searchError}
       </>
