@@ -31,27 +31,23 @@ class SearchForm extends Component {
       if(headline.title.toLowerCase().includes(this.state.searchTerm.toLowerCase())) {
 
         console.log("headine", headline.title)
-        // console.log("this.searchterm", this.state.searchTerm)
         return headline.title
       }
     });
     this.setState({ filteredArticles: foundArticles })
   };
   
-  // render () { 
-  //   const searchedArticles = this.state.filteredArticles.map((headline) => {
-  //     return (
-  //       <ArticleCard
-  //       title={headline.title}
-  //       byline={headline.byline}
-  //       abstract={headline.abstract}
-  //      />
-  //   )
-  // });
+  render () { 
+    const searchedArticles = this.state.filteredArticles.map((headline) => {
+      return (
+        <ArticleCard
+        title={headline.title}
+        byline={headline.byline}
+        abstract={headline.abstract}
+       />
+    )
+  });
 
-    // console.log("state set", this.state.filteredArticles)
-    // console.log("console", this.props.headlines[1].title)
-   render() {
     return (
       <>
           <form>
@@ -63,6 +59,7 @@ class SearchForm extends Component {
               />
              <button className='submit-btn' onClick={(event) => this.handleSubmit(event)}>Submit</button>
          </form> 
+         {this.state.hasSearched && this.state.filteredArticles.length > 0 && searchedArticles}
       </>
     )
   }
