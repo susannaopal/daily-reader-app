@@ -38,13 +38,17 @@ class SearchForm extends Component {
   render () { 
     const searchedArticles = this.state.filteredArticles.map((headline, index) => {
       return (
+        <>
+        <a href={headline.url}>
         <ArticleCard
         title={headline.title}
         byline={headline.byline}
         abstract={headline.abstract}
-          id={index}
-          key={index}
+        id={index}
+        key={index}
        />
+      </a>
+      </>
     )
   });
 
