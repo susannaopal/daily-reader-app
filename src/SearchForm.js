@@ -33,15 +33,8 @@ class SearchForm extends Component {
       }
     });
     this.setState({ filteredArticles: foundArticles })
-    this.clearSearch()
   };
   
-  clearSearch = () => {
-    this.setState({
-      searchTerm: '',
-    })
-  }
-
   render () { 
     const searchedArticles = this.state.filteredArticles.map((headline, index) => {
       return (
@@ -58,7 +51,6 @@ class SearchForm extends Component {
       </>
     )
   });
-
     return (
       <>
           <form>
