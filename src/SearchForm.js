@@ -38,7 +38,8 @@ class SearchForm extends Component {
   render () { 
     const searchedArticles = this.state.filteredArticles.map((headline, index) => {
       return (
-        <>
+        <div className='returned-headlines-div'>
+        <p>Search Result:</p>
         <a href={headline.url}>
         <ArticleCard
         title={headline.title}
@@ -48,7 +49,7 @@ class SearchForm extends Component {
         key={index}
        />
       </a>
-      </>
+      </div>
     )
   });
     return (
@@ -57,7 +58,7 @@ class SearchForm extends Component {
             <h3>Search Headlines: </h3>
             <input className='search-bar-input'
               type='text'
-              placeholder='🔎 Search Articles'
+              placeholder='🔎 Search Headlines'
               value={this.state.searchTerm}
               onChange={this.handleChange}
               />
