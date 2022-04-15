@@ -33,7 +33,7 @@ Returned Search Result:
 
 Error Handling:
 
-![error1](https://user-images.githubusercontent.com/83846677/163568413-25561e67-da09-42c8-b11d-b3a4cd38fbff.png)
+![error1](https://user-images.githubusercontent.com/83846677/163568721-d9a4c652-0fa1-4d83-9e79-06e452b637d5.png)
 
 ![error2](https://user-images.githubusercontent.com/83846677/163568414-144f248b-4917-4576-a688-4560639f974e.png)
 
