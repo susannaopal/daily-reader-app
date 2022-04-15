@@ -7,7 +7,7 @@
   - [Install + Setup](#set-up)
   - [Contributors](#contributors)
   - [Wins](#wins)
-  - [Future Iterations](#future iterations)
+  - [Future Iterations](#future-iterations)
   - [Project Specs](#project-specs)
 
 ## Abstract
@@ -44,8 +44,6 @@ Error Handling:
   - Run `npm install`
   - `npm run dev`
   - Copy local host into browser or run http://localhost:3000/
-
-
 
 ## Contributor
   - [Susanna Carey](https://github.com/susannaopal)
