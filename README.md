@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Mod 4 Take Home Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+  - [Abstract](#abstract)
+  - [Technologies](#technologies)
+  - [Illustrations](#illustrations)
+  - [Install + Setup](#set-up)
+  - [Contributors](#contributors)
+  - [Wins](#wins)
+  - [Future Iterations](#future iterations)
+  - [Project Specs](#project-specs)
 
-## Available Scripts
+## Abstract
+The goal of this project was to build an application with a team of back-end developers and implement new concepts, patterns, and libraries that have not been explicitly taught while at Turing.
+The app allows a user to explore and discover animal and plant species that are classified as critically imperiled. If a user chooses to register an account, they will be able to login and favorite the species they find the most interesting in order to keep track of their status. Otherwise, anyone can explore the app by choosing the guest option.  
 
-In the project directory, you can run:
 
-### `npm start`
+## Technologies
+  - React
+  - VS Code
+  - [New York Times Top Stories API](https://developer.nytimes.com/docs/top-stories-product/1/overview)
+  - Lighthouse Accessiblity (97%)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Illustrations
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+App Land Page:
 
-### `npm test`
+![landing-page](https://user-images.githubusercontent.com/83846677/163568367-b3050387-d3d4-40e8-9a33-420927cd9fbb.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Returned Search Result:
 
-### `npm run build`
+![search-result](https://user-images.githubusercontent.com/83846677/163568375-54ac17de-2fc7-4368-a775-0443c6ce8b6c.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Error Handling:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![error1](https://user-images.githubusercontent.com/83846677/163568413-25561e67-da09-42c8-b11d-b3a4cd38fbff.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![error2](https://user-images.githubusercontent.com/83846677/163568414-144f248b-4917-4576-a688-4560639f974e.png)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Install + Setup
+  - Clone this [repo](https://github.com/susannaopal/daily-reader-app) to your local machine.
+  - `cd` into the directory `daily-reader-app`
+  - Run `npm install`
+  - `npm run dev`
+  - Copy local host into browser or run http://localhost:3000/
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contributor
+  - [Susanna Carey](https://github.com/susannaopal)
 
-## Learn More
+## Future Iterations
+  - A full Cypress Testing Suite (installed but incomplete)
+  - Create single view cards of each story 
+  - Acknowledgement that NYT stories have a paywall limit 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Project Specs
+  - The challenge spec & rubric can be found [here](https://www.google.com/url?q=https://mod4.turing.edu/projects/take_home/&sa=D&source=calendar&usd=2&usg=AOvVaw1GtOKy4X9E8REw0yVV_1Oe)
