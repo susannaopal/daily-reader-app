@@ -5,8 +5,7 @@
   - [Technologies](#technologies)
   - [Illustrations](#illustrations)
   - [Install + Setup](#set-up)
-  - [Contributors](#contributors)
-  - [Wins](#wins)
+  - [Contributor](#contributor)
   - [Future Iterations](#future-iterations)
   - [Project Specs](#project-specs)
 
