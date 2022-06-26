@@ -3,14 +3,14 @@ import ArticleCard from './ArticleCard.js';
 import './HeadlinesContainer.css';
 
 const ArticlesContainer = ( {headlines} ) => {
-  const articleCards = headlines.map(headline => {
+  const articleCards = headlines.map((headline, index) => {
     return (
       <ArticleCard 
         title={headline.title}
         byline={headline.byline}
         abstract={headline.abstract}
-        id={headline.id}
-        key={headline.id}
+        id={index}
+        key={index}
         url={headline.url}
       />
     )
@@ -23,6 +23,7 @@ const ArticlesContainer = ( {headlines} ) => {
     </div>
   )
 }
+
 
 export default ArticlesContainer;
 

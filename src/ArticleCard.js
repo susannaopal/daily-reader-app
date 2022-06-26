@@ -2,7 +2,7 @@ import React from 'react';
 import './ArticleCard.css';
 
 
-const ArticleCard = ({ title, abstract, byline, url, id }) => {
+const ArticleCard = ({ title, abstract, byline, url }) => {
   return (
     <div className="article-card">
       <a href={url}>

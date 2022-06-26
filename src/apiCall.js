@@ -1,9 +1,11 @@
 export const fetchHeadlines = () => {
-  return fetch ('https://api.nytimes.com/svc/topstories/v2/home.json?api-key=dDvrAKGNk8RrCbAjVJQ7jsYBd1FL4mz0')
-  .then(response => response.json());
+  return fetch(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=4bxWhQUEJsgqskrAo23GYzh6xYoBnPOE`)
+    .then(res => {
+      if (res.ok) {
+        return res.json()
+      } else {
+        throw new Error()
+      }
+    })
+    .catch(err => err)
 }
-
-// export const fetchSingleSection = (section) => {
-//   return fetch (`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=dDvrAKGNk8RrCbAjVJQ7jsYBd1FL4mz0`)
-//   .then(response => response.json())
-// }

@@ -1,35 +1,34 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import HeadlinesContainer from './HeadlinesContainer';
 import Nav from './Nav'
-import { fetchHeadlines, fetchSingleSection } from './apiCall.js';
+import { fetchHeadlines } from './apiCall.js';
 import SearchForm from './SearchForm.js';
 
+const App = () => {
+  const [headlines, setHeadlines] = useState([])
+  const [error, setError] = useState('')
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      headlines: [],
-      error: ''
-    };
-  }
+  useEffect(() => {
+    fetchHeadlines()
+      .then(data => {
+        if (data.results) {
+          setHeadlines(data.results)
+          setError('')
+        } else {
+          setError('Uh Oh! There was an error, please try again.')
+        }
+      })
+  }, [])
 
-componentDidMount = () => {
-  fetchHeadlines()
-  .then(data => this.setState({headlines: [...data.results]}))
-  .catch(error => this.setState({error: error}))
+  
+  return (
+    <main className='App'>
+      <Nav />
+      <SearchForm headlines={headlines}/>
+      <HeadlinesContainer headlines={headlines} />
+    </main>
+  )
 }
-
-render() {
-  return(
-      <main className='App'>
-          <Nav />
-          <SearchForm headlines={this.state.headlines}/>
-          <HeadlinesContainer headlines={this.state.headlines}/>
-      </main>
-    )
-  }
-};
 
 export default App;
