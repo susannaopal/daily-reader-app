@@ -1,8 +1,9 @@
 import { useState } from "react";
 
-const SearchForm = ({headlines, setIsSearching}) => {
+const SearchForm = ({headlines, setIsSearching, setSearchErrorMsg}) => {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState('');
+  
   
   const handleFilter = (event) => {
     setIsSearching(true)
@@ -13,6 +14,7 @@ const SearchForm = ({headlines, setIsSearching}) => {
     })
     if (searchWord === '') {
       setFilteredData([])
+      setSearchErrorMsg()
       setIsSearching(false)
     } else {
       setFilteredData(newFilter)
