@@ -1,6 +1,4 @@
-import React from 'react';
 import './ArticleCard.css';
-
 
 const ArticleCard = ({ title, abstract, byline, url }) => {
   return (

@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
+import { useEffect, useState } from 'react';
+import { fetchHeadlines } from './apiCall.js';
 import HeadlinesContainer from './HeadlinesContainer';
 import Nav from './Nav'
-import { fetchHeadlines } from './apiCall.js';
 import SearchForm from './SearchForm.js';
+import './App.css';
 
 const App = () => {
   const [headlines, setHeadlines] = useState([])
   const [error, setError] = useState('')
+  const [isSearching, setIsSearching] = useState(false)
 
   useEffect(() => {
     fetchHeadlines()
@@ -16,19 +17,19 @@ const App = () => {
           setHeadlines(data.results)
           setError('')
         } else {
-          setError('Uh Oh! There was an error, please try again.')
+          setError('Oh no! There was an error, please try again.')
         }
       })
-  }, [])
-
+      }, [])
   
   return (
     <main className='App'>
       <Nav />
-      <SearchForm headlines={headlines}/>
-      <HeadlinesContainer headlines={headlines} />
+      <SearchForm headlines={headlines} setIsSearching={setIsSearching}/>
+      {!isSearching && <HeadlinesContainer headlines={headlines} />}
+      
     </main>
   )
-}
+}      
 
 export default App;
