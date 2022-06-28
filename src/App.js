@@ -9,8 +9,6 @@ const App = () => {
   const [headlines, setHeadlines] = useState([]);
   const [error, setError] = useState('');
   const [isSearching, setIsSearching] = useState(false);
-  const [searchErrorMsg, setSearchErrorMsg] = useState( 'That is not available, please try your search again.')
-
 
   useEffect(() => {
     fetchHeadlines()
@@ -27,8 +25,8 @@ const App = () => {
   return (
     <main className='App'>
       <Nav />
-      <SearchForm headlines={headlines} setIsSearching={setIsSearching} setSearchErrorMsg={setSearchErrorMsg}/>
-      {!isSearching ? <HeadlinesContainer headlines={headlines} /> : searchErrorMsg}
+      <SearchForm headlines={headlines} setIsSearching={setIsSearching} isSearching={isSearching}/>
+      {!isSearching && <HeadlinesContainer headlines={headlines} />}
       
     </main>
   )
