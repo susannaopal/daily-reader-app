@@ -9,8 +9,8 @@ const SearchForm = ({headlines, setIsSearching, isSearching}) => {
     setIsSearching(true)
     const searchWord = event.target.value;
     setWordEntered(searchWord);
-    const newFilter = headlines.filter((value) => {
-      return value.title.toLowerCase().includes(searchWord.toLowerCase())
+    const newFilter = headlines.filter((headline) => {
+      return headline.title.toLowerCase().includes(searchWord.toLowerCase())
     })
     if (searchWord === '') {
       setFilteredData([])
