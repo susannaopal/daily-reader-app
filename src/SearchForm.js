@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const SearchForm = ({headlines, setIsSearching}) => {
+const SearchForm = ({headlines, setIsSearching, isSearching}) => {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState('');
   
@@ -19,6 +19,9 @@ const SearchForm = ({headlines, setIsSearching}) => {
       setFilteredData(newFilter)
     }   
   }
+
+    const noResultsMessage = <div>That is not available, please try your search again.</div>
+
 
     const filteredCards = filteredData.map((data) => {
       return (
@@ -43,6 +46,7 @@ const SearchForm = ({headlines, setIsSearching}) => {
         />
         <div className='search-results'>
           {filteredData.length > 0 && filteredCards}
+          {(filteredData.length === 0 && isSearching) && noResultsMessage}
         </div>
       </div>
     </div>
