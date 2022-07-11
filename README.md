@@ -15,6 +15,7 @@ The goal of this app was to be created from a take home challenge. The app utili
 
 ## Technologies
   - React
+  - React Hooks (code revised from Class components to Hooks)
   - VS Code
   - [New York Times Top Stories API](https://developer.nytimes.com/docs/top-stories-product/1/overview)
   - Lighthouse Accessiblity (97%)
