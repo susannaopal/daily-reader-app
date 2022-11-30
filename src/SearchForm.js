@@ -27,8 +27,8 @@ const SearchForm = ({headlines, setIsSearching, isSearching}) => {
       return (
         <div className="article-card">
           <a href={data.url}>
-          <h3>{data.title}</h3>
-          <h4>{data.byline}</h4>
+          <h1>{data.title}</h1>
+          <h2>{data.byline}</h2>
           <p>{data.abstract}</p>
           </a>
         </div>
