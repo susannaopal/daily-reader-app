@@ -1,4 +1,5 @@
-# Mod 4 Take Home Challenge
+# NYT Top Stories Take Home Challenge
+- Vist [The Daily Reader](https://tasty-noise.surge.sh/)
 
 ## Table of Contents
   - [Abstract](#abstract)
@@ -18,23 +19,11 @@ The goal of this app was to be created from a take home challenge. The app utili
   - React Hooks (code revised from Class components to Hooks)
   - VS Code
   - [New York Times Top Stories API](https://developer.nytimes.com/docs/top-stories-product/1/overview)
-  - Lighthouse Accessiblity (97%)
+  - Lighthouse Best Practices (100%) | Accessiblity (96%)
 
-## Illustrations
+## Demonstration 
 
-App Land Page:
-
-![landing-page](https://user-images.githubusercontent.com/83846677/163568367-b3050387-d3d4-40e8-9a33-420927cd9fbb.png)
-
-Returned Search Result:
-
-![search-result](https://user-images.githubusercontent.com/83846677/163568375-54ac17de-2fc7-4368-a775-0443c6ce8b6c.png)
-
-Error Handling:
-
-![error1](https://user-images.githubusercontent.com/83846677/163568721-d9a4c652-0fa1-4d83-9e79-06e452b637d5.png)
-
-![error2](https://user-images.githubusercontent.com/83846677/163568414-144f248b-4917-4576-a688-4560639f974e.png)
+![landing-page](https://media.giphy.com/media/IPBz5cnCvLAp4EVT5M/giphy.gif)
 
 
 ## Install + Setup
