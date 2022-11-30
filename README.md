@@ -11,7 +11,7 @@
   - [Project Specs](#project-specs)
 
 ## Abstract
-The goal of this app was to be created from a take home challenge. The app utilizes the Top Stories API from the New York Times. Users can browse the top headlines of the day from the Time's homepage, click on the article to be taken to the news story, or search through the headlines of the day. Any matching articles will appear for the user to read, while the other articles that do not match that search word will disappear. This app was initially written with React Class components, but was recently updated to incorporate React Hooks. Additionally, a full Cypress test suite was created. 
+The goal of this app was to be created from a take home challenge. The app utilizes the Top Stories API from the New York Times. Users can browse the top headlines of the day from the Time's homepage, click on the article to be taken to the news story, or search through the headlines of the day. Any matching articles will appear for the user to read, while the other articles that do not match that search word will disappear. This app was initially written with React Class components, but was recently updated to incorporate React Hooks. 
 
 
 ## Technologies
@@ -38,7 +38,7 @@ The goal of this app was to be created from a take home challenge. The app utili
 
 ## Future Iterations
   - Create single view cards of each story 
-  - Acknowledgement that NYT stories have a paywall limit 
+  - Create a full Cypress test suite
 
 
 ## Project Specs
