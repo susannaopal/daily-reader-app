@@ -1,4 +1,5 @@
-# Mod 4 Take Home Challenge
+# NYT Top Stories Take Home Challenge
+- [visit the deployed app](https://tasty-noise.surge.sh/)
 
 ## Table of Contents
   - [Abstract](#abstract)
