@@ -1,5 +1,5 @@
 # NYT Top Stories Take Home Challenge
-- Vist [The Daily Reader](https://tasty-noise.surge.sh/)
+- Vist [The Daily Reader](nyt-reader.surge.sh)
 
 ## Table of Contents
   - [Abstract](#abstract)
